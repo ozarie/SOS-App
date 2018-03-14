@@ -17,7 +17,6 @@ class WelcomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "
         
         let user = Auth.auth().currentUser
         if user != nil {
