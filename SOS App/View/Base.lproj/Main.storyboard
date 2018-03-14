@@ -92,16 +92,14 @@
                                     <action selector="buttonPressed:" destination="g02-AD-gYR" eventType="touchUpInside" id="de8-VX-bzQ"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dRP-y8-4ho">
-                                <rect key="frame" x="139" y="226" width="97" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dRP-y8-4ho">
+                                <rect key="frame" x="32" y="226" width="311" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0WD-kI-SeQ">
-                                <rect key="frame" x="130" y="319" width="97" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0WD-kI-SeQ">
+                                <rect key="frame" x="32" y="319" width="311" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -109,7 +107,11 @@
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="0WD-kI-SeQ" secondAttribute="trailing" constant="16" id="6Ie-4j-xmd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dRP-y8-4ho" secondAttribute="trailing" constant="16" id="CYM-Q4-frB"/>
                             <constraint firstItem="C3A-2t-WgD" firstAttribute="trailing" secondItem="4dP-r3-Vcu" secondAttribute="trailing" constant="16" id="YcE-Ym-Dbr"/>
+                            <constraint firstItem="dRP-y8-4ho" firstAttribute="leading" secondItem="vH7-7E-thJ" secondAttribute="leadingMargin" constant="16" id="cb4-gM-s96"/>
+                            <constraint firstItem="0WD-kI-SeQ" firstAttribute="leading" secondItem="vH7-7E-thJ" secondAttribute="leadingMargin" constant="16" id="ekd-ms-fxx"/>
                             <constraint firstItem="4dP-r3-Vcu" firstAttribute="leading" secondItem="C3A-2t-WgD" secondAttribute="leading" constant="16" id="xZG-yz-LoR"/>
                             <constraint firstItem="C3A-2t-WgD" firstAttribute="bottom" secondItem="4dP-r3-Vcu" secondAttribute="bottom" constant="16" id="zxP-ob-xp7"/>
                         </constraints>
@@ -404,6 +406,6 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="B39-TI-wNu"/>
-        <segue reference="ra3-Yr-dYd"/>
+        <segue reference="dK3-Uk-9sW"/>
     </inferredMetricsTieBreakers>
 </document>
