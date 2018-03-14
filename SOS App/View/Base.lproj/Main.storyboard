@@ -217,7 +217,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" textContentType="tel"/>
                             </textField>
                             <button opaque="NO" tag="402" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3cV-Y6-AZn">
                                 <rect key="frame" x="129" y="522" width="128" height="30"/>
@@ -239,6 +239,7 @@
                         <barButtonItem key="backBarButtonItem" title="Back" id="25F-Ta-eXu"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="joinButton" destination="3cV-Y6-AZn" id="HjQ-Ly-O7d"/>
                         <outlet property="roomTextField" destination="7rE-rd-bpZ" id="BnR-eq-NmH"/>
                         <segue destination="sYR-Ou-YIp" kind="push" identifier="goToGame" id="B39-TI-wNu"/>
                     </connections>
@@ -287,7 +288,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="123456" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yck-fh-api">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="??????" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yck-fh-api">
                                 <rect key="frame" x="107" y="347" width="164" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -316,7 +317,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="roomNumber" destination="Yck-fh-api" id="aWM-L9-4D6"/>
+                        <outlet property="roomNumberLabel" destination="Yck-fh-api" id="aWM-L9-4D6"/>
                         <segue destination="sYR-Ou-YIp" kind="push" identifier="goToGame" id="uHl-Xa-npD"/>
                     </connections>
                 </viewController>
@@ -406,6 +407,6 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="B39-TI-wNu"/>
-        <segue reference="dK3-Uk-9sW"/>
+        <segue reference="ra3-Yr-dYd"/>
     </inferredMetricsTieBreakers>
 </document>
