@@ -7,19 +7,42 @@
 //
 
 import UIKit
+import Firebase
 
 class WelcomeViewController: UIViewController {
+    
+    let TAG_REGISTER : Int = 101
+    let TAG_LOGIN : Int = 102
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        let user = Auth.auth().currentUser
+        if user != nil {
+            performSegue(withIdentifier: "goToMainMenu", sender: self)
+        }
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
+    
+    @IBAction func buttonPressed(_ sender: UIButton) {
+        
+        switch sender.tag {
+        case TAG_REGISTER:
+            performSegue(withIdentifier: "goToRegister", sender: self)
+            break
+        case TAG_LOGIN:
+            performSegue(withIdentifier: "goToLogin", sender: self)
+            break
+        default:
+            break
+        }
+    }
+    
 
 }
 
