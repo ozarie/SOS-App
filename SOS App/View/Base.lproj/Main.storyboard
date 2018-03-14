@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Welcome View Controller-->
+        <!--Welcome To SOS App-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="WelcomeViewController" customModule="SOS_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Welcome To SOS App" id="BYZ-38-t0r" customClass="WelcomeViewController" customModule="SOS_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -55,17 +55,46 @@
             </objects>
             <point key="canvasLocation" x="479.19999999999999" y="133.74384236453201"/>
         </scene>
-        <!--Register View Controller-->
+        <!--Sign Up SOS App-->
         <scene sceneID="aUZ-cJ-yWU">
             <objects>
-                <viewController id="g02-AD-gYR" customClass="RegisterViewController" customModule="SOS_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Sign Up SOS App" id="g02-AD-gYR" customClass="RegisterViewController" customModule="SOS_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vH7-7E-thJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4dP-r3-Vcu">
+                                <rect key="frame" x="159" y="579" width="57" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Register">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="g02-AD-gYR" eventType="touchUpInside" id="de8-VX-bzQ"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dRP-y8-4ho">
+                                <rect key="frame" x="139" y="226" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0WD-kI-SeQ">
+                                <rect key="frame" x="130" y="319" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="C3A-2t-WgD"/>
                     </view>
                     <connections>
+                        <outlet property="emailTextField" destination="dRP-y8-4ho" id="URd-Kw-3sj"/>
+                        <outlet property="passwordTextField" destination="0WD-kI-SeQ" id="zdd-cH-eW7"/>
                         <segue destination="17J-uO-uTN" kind="show" id="ra3-Yr-dYd"/>
                     </connections>
                 </viewController>
@@ -73,10 +102,10 @@
             </objects>
             <point key="canvasLocation" x="1526" y="578"/>
         </scene>
-        <!--Main Menu View Controller-->
+        <!--Main Menu-->
         <scene sceneID="PD5-d0-eAf">
             <objects>
-                <viewController id="17J-uO-uTN" customClass="MainMenuViewController" customModule="SOS_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Main Menu" id="17J-uO-uTN" customClass="MainMenuViewController" customModule="SOS_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dF2-oE-g4M">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -88,17 +117,46 @@
             </objects>
             <point key="canvasLocation" x="2610" y="134"/>
         </scene>
-        <!--Login View Controller-->
+        <!--Log In SOS App-->
         <scene sceneID="Pc4-2L-RFo">
             <objects>
-                <viewController id="bLs-bh-1Eh" customClass="LoginViewController" customModule="SOS_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Log In SOS App" id="bLs-bh-1Eh" customClass="LoginViewController" customModule="SOS_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="s4K-V3-IWY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ewj-t2-cAN">
+                                <rect key="frame" x="159" y="603" width="57" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="bLs-bh-1Eh" eventType="touchUpInside" id="Yoa-cm-STn"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NMS-CS-abq">
+                                <rect key="frame" x="139" y="224" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1rD-AW-6JB">
+                                <rect key="frame" x="139" y="322" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="UQq-cP-My1"/>
                     </view>
                     <connections>
+                        <outlet property="emailTextField" destination="NMS-CS-abq" id="Egi-jr-FbI"/>
+                        <outlet property="passwordTextField" destination="1rD-AW-6JB" id="239-hQ-qcw"/>
                         <segue destination="17J-uO-uTN" kind="show" id="dK3-Uk-9sW"/>
                     </connections>
                 </viewController>
