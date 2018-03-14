@@ -15,6 +15,9 @@
 		2D34F2DB205912B900242C8E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D34F2DA205912B900242C8E /* LoginViewController.swift */; };
 		2D34F2DD2059130300242C8E /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D34F2DC2059130300242C8E /* RegisterViewController.swift */; };
 		2D34F2DF2059131500242C8E /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D34F2DE2059131500242C8E /* MainMenuViewController.swift */; };
+		2DE1B8E920592BCC00A97012 /* StartNewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE1B8E820592BCC00A97012 /* StartNewViewController.swift */; };
+		2DE1B8EB20592BE400A97012 /* JoinExistingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE1B8EA20592BE400A97012 /* JoinExistingViewController.swift */; };
+		2DE1B8ED20592BF000A97012 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE1B8EC20592BF000A97012 /* GameViewController.swift */; };
 		D7D89EAF2059189A00659DFC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D7D89EAE2059189A00659DFC /* GoogleService-Info.plist */; };
 		E3B67E445A07D7A5E403E859 /* Pods_SOS_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 124C7CE82B4D23D2F246C522 /* Pods_SOS_App.framework */; };
 /* End PBXBuildFile section */
@@ -31,6 +34,9 @@
 		2D34F2DA205912B900242C8E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2D34F2DC2059130300242C8E /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		2D34F2DE2059131500242C8E /* MainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
+		2DE1B8E820592BCC00A97012 /* StartNewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StartNewViewController.swift; path = ../../../../StartNewViewController.swift; sourceTree = "<group>"; };
+		2DE1B8EA20592BE400A97012 /* JoinExistingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = JoinExistingViewController.swift; path = ../../../../JoinExistingViewController.swift; sourceTree = "<group>"; };
+		2DE1B8EC20592BF000A97012 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GameViewController.swift; path = ../../../../GameViewController.swift; sourceTree = "<group>"; };
 		AEDCCEAFFF8F7DB11C52EBAE /* Pods-SOS App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SOS App.release.xcconfig"; path = "Pods/Target Support Files/Pods-SOS App/Pods-SOS App.release.xcconfig"; sourceTree = "<group>"; };
 		D600E371B0455266FED33DB8 /* Pods-SOS App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SOS App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SOS App/Pods-SOS App.debug.xcconfig"; sourceTree = "<group>"; };
 		D7D89EAE2059189A00659DFC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -87,6 +93,9 @@
 				2D34F2DA205912B900242C8E /* LoginViewController.swift */,
 				2D34F2DC2059130300242C8E /* RegisterViewController.swift */,
 				2D34F2DE2059131500242C8E /* MainMenuViewController.swift */,
+				2DE1B8E820592BCC00A97012 /* StartNewViewController.swift */,
+				2DE1B8EA20592BE400A97012 /* JoinExistingViewController.swift */,
+				2DE1B8EC20592BF000A97012 /* GameViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -264,11 +273,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DE1B8E920592BCC00A97012 /* StartNewViewController.swift in Sources */,
 				2D34F2DB205912B900242C8E /* LoginViewController.swift in Sources */,
 				2D34F2DF2059131500242C8E /* MainMenuViewController.swift in Sources */,
 				2D1EDC1920590FFE002DE046 /* WelcomeViewController.swift in Sources */,
+				2DE1B8ED20592BF000A97012 /* GameViewController.swift in Sources */,
 				2D1EDC1720590FFE002DE046 /* AppDelegate.swift in Sources */,
 				2D34F2DD2059130300242C8E /* RegisterViewController.swift in Sources */,
+				2DE1B8EB20592BE400A97012 /* JoinExistingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

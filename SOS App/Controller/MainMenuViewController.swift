@@ -7,29 +7,56 @@
 //
 
 import UIKit
+import Firebase
 
 class MainMenuViewController: UIViewController {
-
+    
+    let TAG_START : Int = 401
+    let TAG_JOIN : Int = 402
+    
+    @IBOutlet weak var loggedInEmail: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let email = Auth.auth().currentUser!.email
 
-        // Do any additional setup after loading the view.
+        loggedInEmail.text!.append(email!)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        self.navigationItem.setHidesBackButton(true, animated: true)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    
+    @IBAction func logoutButtonPressed(_ sender: UIBarButtonItem) {
+        
+        do {
+            try Auth.auth().signOut()
+            navigationController?.popToRootViewController(animated: true)
+        } catch {
+            print("oh no! \(error)")
+        }
     }
-    */
+    
+    
+    @IBAction func buttonPressed(_ sender: UIButton) {
+        
+        switch sender.tag {
+        case TAG_START:
+            performSegue(withIdentifier: "goToStartNew", sender: self)
+            break
+        case TAG_JOIN:
+            performSegue(withIdentifier: "goToJoinExisting", sender: self)
+            break
+        default:
+            break
+        }
+    }
+    
+    
 
 }

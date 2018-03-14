@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MnG-u3-BWp">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MnG-u3-BWp">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -44,16 +44,18 @@
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="E9G-Yn-8in"/>
+                    <navigationItem key="navigationItem" title="Welcome To SOS App" id="E9G-Yn-8in">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="9Ji-HW-Rhq"/>
+                    </navigationItem>
                     <connections>
-                        <segue destination="bLs-bh-1Eh" kind="show" identifier="goToLogin" id="ZED-qj-q5g"/>
-                        <segue destination="g02-AD-gYR" kind="show" identifier="goToRegister" id="pCc-6i-w5A"/>
-                        <segue destination="17J-uO-uTN" kind="show" identifier="goToMainMenu" id="ukB-co-0K5"/>
+                        <segue destination="bLs-bh-1Eh" kind="push" identifier="goToLogin" id="ZED-qj-q5g"/>
+                        <segue destination="g02-AD-gYR" kind="push" identifier="goToRegister" id="pCc-6i-w5A"/>
+                        <segue destination="17J-uO-uTN" kind="push" identifier="goToMainMenu" id="ukB-co-0K5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="479.19999999999999" y="133.74384236453201"/>
+            <point key="canvasLocation" x="299.5" y="180.99999999999997"/>
         </scene>
         <!--Sign Up SOS App-->
         <scene sceneID="aUZ-cJ-yWU">
@@ -92,15 +94,18 @@
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="C3A-2t-WgD"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Sign Up SOS App" id="oD4-iS-Gmh">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="Zbw-1f-Y7Q"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="emailTextField" destination="dRP-y8-4ho" id="URd-Kw-3sj"/>
                         <outlet property="passwordTextField" destination="0WD-kI-SeQ" id="zdd-cH-eW7"/>
-                        <segue destination="17J-uO-uTN" kind="show" id="ra3-Yr-dYd"/>
+                        <segue destination="17J-uO-uTN" kind="push" identifier="goToMainMenu" id="ra3-Yr-dYd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KJ1-ov-aej" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1526" y="578"/>
+            <point key="canvasLocation" x="953.75" y="782.22666666666669"/>
         </scene>
         <!--Main Menu-->
         <scene sceneID="PD5-d0-eAf">
@@ -109,13 +114,117 @@
                     <view key="view" contentMode="scaleToFill" id="dF2-oE-g4M">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You are Logged in as: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ipY-FJ-Yyh">
+                                <rect key="frame" x="16" y="123" width="343" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" tag="401" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n3O-Mt-oXh">
+                                <rect key="frame" x="133" y="400" width="109" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Start new game">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="17J-uO-uTN" eventType="touchUpInside" id="yfi-W9-QQ2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="402" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Av6-HX-ldN">
+                                <rect key="frame" x="123" y="495" width="128" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Join existing game">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="17J-uO-uTN" eventType="touchUpInside" id="egU-wg-sZ5"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="H2o-dc-eb2"/>
                     </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Main Menu" id="dKI-gZ-V4h">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="PRT-gc-fX5"/>
+                        <barButtonItem key="rightBarButtonItem" title="Logout" id="scL-GG-n19">
+                            <connections>
+                                <action selector="logoutButtonPressed:" destination="17J-uO-uTN" id="EPg-ZM-BgQ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="loggedInEmail" destination="ipY-FJ-Yyh" id="8pA-aN-bdQ"/>
+                        <segue destination="XjY-U6-ayz" kind="push" identifier="goToStartNew" id="FtS-iH-9eQ"/>
+                        <segue destination="TyG-jQ-EgA" kind="push" identifier="goToJoinExisting" id="P3x-L1-fpV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JKQ-aT-1fs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2610" y="134"/>
+            <point key="canvasLocation" x="1630.5" y="181"/>
+        </scene>
+        <!--Join existing-->
+        <scene sceneID="zvu-bx-W0z">
+            <objects>
+                <viewController title="Join existing" id="TyG-jQ-EgA" customClass="JoinExistingViewController" customModule="SOS_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="w0f-Ai-wlr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="BBx-tO-Xnw"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Join existing" id="kOi-jU-4V3">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="25F-Ta-eXu"/>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="sYR-Ou-YIp" kind="push" identifier="goToGame" id="B39-TI-wNu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fZj-CU-7rA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2233" y="874"/>
+        </scene>
+        <!--Game-->
+        <scene sceneID="9wS-eh-qMJ">
+            <objects>
+                <viewController title="Game" id="sYR-Ou-YIp" customClass="GameViewController" customModule="SOS_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VPz-mY-fBN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="Hqw-lU-cwA"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Game" id="ppf-2A-XMz"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ToR-qh-eHo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2816" y="381"/>
+        </scene>
+        <!--Start new-->
+        <scene sceneID="LMM-BL-1z9">
+            <objects>
+                <viewController title="Start new" id="XjY-U6-ayz" customClass="StartNewViewController" customModule="SOS_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0hy-6I-61R">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="XU0-J2-jvW"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Start new" id="Qml-ek-PNN">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="JML-fU-szr"/>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="sYR-Ou-YIp" kind="push" identifier="goToGame" id="uHl-Xa-npD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Oa-du-h7G" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2275" y="-204"/>
         </scene>
         <!--Log In SOS App-->
         <scene sceneID="Pc4-2L-RFo">
@@ -154,23 +263,26 @@
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="UQq-cP-My1"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Log In SOS App" id="9Do-TH-rtM">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="q9Q-Uz-5hZ"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="emailTextField" destination="NMS-CS-abq" id="Egi-jr-FbI"/>
                         <outlet property="passwordTextField" destination="1rD-AW-6JB" id="239-hQ-qcw"/>
-                        <segue destination="17J-uO-uTN" kind="show" id="dK3-Uk-9sW"/>
+                        <segue destination="17J-uO-uTN" kind="push" identifier="goToMainMenu" id="dK3-Uk-9sW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mCU-Cn-fdC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1526" y="-315"/>
+            <point key="canvasLocation" x="953.75" y="-426.29999999999995"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="tRg-E4-ch6">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MnG-u3-BWp" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="q4G-58-xyP">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="q4G-58-xyP">
+                        <rect key="frame" x="0.0" y="44" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -180,10 +292,11 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fU2-92-1kR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-546" y="134"/>
+            <point key="canvasLocation" x="-341.25" y="181.34666666666666"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="B39-TI-wNu"/>
         <segue reference="ukB-co-0K5"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -28,6 +28,7 @@ class LoginViewController: UIViewController {
             if error != nil {
                 //Faild
                 print("Oh No!!! \(String(describing: error?.localizedDescription))")
+                self.displayError(error: error)
             }
             else {
                 //Success
@@ -36,6 +37,18 @@ class LoginViewController: UIViewController {
                 self.performSegue(withIdentifier: "goToMainMenu", sender: self)
             }
         }
+    }
+    
+    func displayError(error: Error?){
+        
+        let alert = UIAlertController(title: "Oh No!", message: "Something went wrong... \nPlease try again.", preferredStyle: .alert)
+        
+        let action = UIAlertAction(title: "Ok", style: .default) { (action) in
+            self.dismiss(animated: true, completion: nil)
+        }
+        
+        alert.addAction(action)
+        present(alert, animated: true, completion: nil)
     }
     
 }
