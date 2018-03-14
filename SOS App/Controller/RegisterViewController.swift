@@ -14,6 +14,7 @@ class RegisterViewController: UIViewController {
     
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var registerButton: UIButton!
     
 
     override func viewDidLoad() {
@@ -25,6 +26,8 @@ class RegisterViewController: UIViewController {
     
     @IBAction func buttonPressed(_ sender: UIButton) {
         
+        registerButton.isEnabled = false
+        
         Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!) { (user, error) in
             if error != nil {
                 //Faild
@@ -34,9 +37,9 @@ class RegisterViewController: UIViewController {
             else {
                 //Success
                 print("Registration Successful")
-                
                 self.performSegue(withIdentifier: "goToMainMenu", sender: self)
             }
+            self.registerButton.isEnabled = true
         }
     }
     

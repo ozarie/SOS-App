@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,30 +19,46 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" tag="102" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x7t-A8-i0l">
-                                <rect key="frame" x="164" y="431" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Login">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ODI-WH-jyk"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="101" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tmp-b7-qMN">
-                                <rect key="frame" x="159" y="561" width="57" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Register">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VqB-BG-tWs"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="GiN-XD-AMF">
+                                <rect key="frame" x="16" y="697" width="343" height="65"/>
+                                <subviews>
+                                    <button opaque="NO" tag="102" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x7t-A8-i0l">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="30"/>
+                                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Login">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ODI-WH-jyk"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tmp-b7-qMN">
+                                        <rect key="frame" x="0.0" y="35" width="343" height="30"/>
+                                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Register">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VqB-BG-tWs"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome To SOS App" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o91-9h-iDz">
+                                <rect key="frame" x="69" y="391" width="236" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GiN-XD-AMF" secondAttribute="trailing" constant="16" id="CyN-rU-LEK"/>
+                            <constraint firstItem="o91-9h-iDz" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="O6I-Yg-NKV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="GiN-XD-AMF" secondAttribute="bottom" constant="16" id="aSi-kx-FGe"/>
+                            <constraint firstItem="o91-9h-iDz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kT2-Hy-oEA"/>
+                            <constraint firstItem="GiN-XD-AMF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="mTe-a7-ndx"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Welcome To SOS App" id="E9G-Yn-8in">
@@ -55,7 +72,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="299.5" y="180.99999999999997"/>
+            <point key="canvasLocation" x="299.5" y="181"/>
         </scene>
         <!--Sign Up SOS App-->
         <scene sceneID="aUZ-cJ-yWU">
@@ -65,9 +82,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4dP-r3-Vcu">
-                                <rect key="frame" x="159" y="579" width="57" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4dP-r3-Vcu">
+                                <rect key="frame" x="16" y="732" width="343" height="30"/>
                                 <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Register">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -92,6 +108,11 @@
                             </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="C3A-2t-WgD" firstAttribute="trailing" secondItem="4dP-r3-Vcu" secondAttribute="trailing" constant="16" id="YcE-Ym-Dbr"/>
+                            <constraint firstItem="4dP-r3-Vcu" firstAttribute="leading" secondItem="C3A-2t-WgD" secondAttribute="leading" constant="16" id="xZG-yz-LoR"/>
+                            <constraint firstItem="C3A-2t-WgD" firstAttribute="bottom" secondItem="4dP-r3-Vcu" secondAttribute="bottom" constant="16" id="zxP-ob-xp7"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="C3A-2t-WgD"/>
                     </view>
                     <navigationItem key="navigationItem" title="Sign Up SOS App" id="oD4-iS-Gmh">
@@ -100,6 +121,7 @@
                     <connections>
                         <outlet property="emailTextField" destination="dRP-y8-4ho" id="URd-Kw-3sj"/>
                         <outlet property="passwordTextField" destination="0WD-kI-SeQ" id="zdd-cH-eW7"/>
+                        <outlet property="registerButton" destination="4dP-r3-Vcu" id="o4a-69-1P4"/>
                         <segue destination="17J-uO-uTN" kind="push" identifier="goToMainMenu" id="ra3-Yr-dYd"/>
                     </connections>
                 </viewController>
@@ -115,9 +137,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You are Logged in as: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ipY-FJ-Yyh">
-                                <rect key="frame" x="16" y="123" width="343" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You are Logged in as: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ipY-FJ-Yyh">
+                                <rect key="frame" x="16" y="156" width="343" height="21"/>
                                 <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -147,6 +168,11 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ipY-FJ-Yyh" firstAttribute="top" secondItem="dF2-oE-g4M" secondAttribute="topMargin" constant="16" id="6S5-hH-0Eb"/>
+                            <constraint firstItem="H2o-dc-eb2" firstAttribute="trailing" secondItem="ipY-FJ-Yyh" secondAttribute="trailing" constant="16" id="RW2-Eu-PXD"/>
+                            <constraint firstItem="ipY-FJ-Yyh" firstAttribute="leading" secondItem="H2o-dc-eb2" secondAttribute="leading" constant="16" id="SWG-Xe-LNd"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="H2o-dc-eb2"/>
                     </view>
                     <toolbarItems/>
@@ -304,9 +330,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ewj-t2-cAN">
-                                <rect key="frame" x="159" y="603" width="57" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ewj-t2-cAN">
+                                <rect key="frame" x="16" y="732" width="343" height="30"/>
                                 <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Login">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -315,22 +340,33 @@
                                     <action selector="buttonPressed:" destination="bLs-bh-1Eh" eventType="touchUpInside" id="Yoa-cm-STn"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NMS-CS-abq">
-                                <rect key="frame" x="139" y="224" width="97" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1rD-AW-6JB">
-                                <rect key="frame" x="139" y="322" width="97" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="E3F-bx-CDV">
+                                <rect key="frame" x="16" y="156" width="343" height="65"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NMS-CS-abq">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1rD-AW-6JB">
+                                        <rect key="frame" x="0.0" y="35" width="343" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="E3F-bx-CDV" firstAttribute="top" secondItem="UQq-cP-My1" secondAttribute="top" constant="16" id="CMf-kg-SDc"/>
+                            <constraint firstItem="E3F-bx-CDV" firstAttribute="leading" secondItem="UQq-cP-My1" secondAttribute="leading" constant="16" id="NUa-Cu-Vtf"/>
+                            <constraint firstItem="UQq-cP-My1" firstAttribute="bottom" secondItem="Ewj-t2-cAN" secondAttribute="bottom" constant="16" id="hxI-z9-1ZX"/>
+                            <constraint firstItem="Ewj-t2-cAN" firstAttribute="leading" secondItem="UQq-cP-My1" secondAttribute="leading" constant="16" id="luj-tV-lxC"/>
+                            <constraint firstItem="UQq-cP-My1" firstAttribute="trailing" secondItem="Ewj-t2-cAN" secondAttribute="trailing" constant="16" id="xXd-ic-6pN"/>
+                            <constraint firstItem="UQq-cP-My1" firstAttribute="trailing" secondItem="E3F-bx-CDV" secondAttribute="trailing" constant="16" id="zL5-yT-RDD"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="UQq-cP-My1"/>
                     </view>
                     <navigationItem key="navigationItem" title="Log In SOS App" id="9Do-TH-rtM">
@@ -338,6 +374,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="emailTextField" destination="NMS-CS-abq" id="Egi-jr-FbI"/>
+                        <outlet property="loginButton" destination="Ewj-t2-cAN" id="FAU-zu-jcA"/>
                         <outlet property="passwordTextField" destination="1rD-AW-6JB" id="239-hQ-qcw"/>
                         <segue destination="17J-uO-uTN" kind="push" identifier="goToMainMenu" id="dK3-Uk-9sW"/>
                     </connections>
@@ -367,6 +404,6 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="B39-TI-wNu"/>
-        <segue reference="ukB-co-0K5"/>
+        <segue reference="ra3-Yr-dYd"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -13,6 +13,7 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var loginButton: UIButton!
     
     
 
@@ -23,6 +24,8 @@ class LoginViewController: UIViewController {
     
     
     @IBAction func buttonPressed(_ sender: UIButton) {
+        
+        loginButton.isEnabled = false
         
         Auth.auth().signIn(withEmail: emailTextField.text!, password: passwordTextField.text!) { (user, error) in
             if error != nil {
@@ -36,6 +39,7 @@ class LoginViewController: UIViewController {
                 
                 self.performSegue(withIdentifier: "goToMainMenu", sender: self)
             }
+            self.loginButton.isEnabled = true
         }
     }
     
