@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 
+
 class WelcomeViewController: UIViewController {
     
     let TAG_REGISTER : Int = 101

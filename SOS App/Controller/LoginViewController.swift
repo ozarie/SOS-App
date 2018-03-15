@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 
+
 class LoginViewController: UIViewController {
     
     @IBOutlet weak var emailTextField: UITextField!
